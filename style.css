@@ -226,8 +226,11 @@ button,
 select { /* 1 */
 	text-transform: none;
 }
-imageCh{
+.imageCh{
 	border:2px;
+	text-align: center;
+	height:100px;
+	width: 100px;
 }
 /**
  * Correct the inability to style clickable types in iOS and Safari.
