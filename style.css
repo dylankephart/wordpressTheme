@@ -227,10 +227,12 @@ select { /* 1 */
 	text-transform: none;
 }
 .imageCh{
-	border:2px;
+	border-color: black;
+	border:5px;
 	text-align: center;
-	height:100px;
-	width: 100px;
+	display: block;
+	height:500px;
+	width: 500px;
 }
 /**
  * Correct the inability to style clickable types in iOS and Safari.
