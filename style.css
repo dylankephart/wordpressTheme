@@ -94,6 +94,7 @@ hr {
 	overflow: visible; /* 2 */
 }
 
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -225,7 +226,9 @@ button,
 select { /* 1 */
 	text-transform: none;
 }
-
+imageCh{
+	border:2px;
+}
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */

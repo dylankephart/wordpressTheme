@@ -26,7 +26,7 @@ get_header();
 
 					the_widget( 'WP_Widget_Recent_Posts' );
 					?>
-
+					 <img class="imageCh" src="<?php bloginfo('template_directory'); ?>/assets/images/download.png" border="0" alt="">
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'blondetheme' ); ?></h2>
 						<ul>
