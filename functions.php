@@ -26,6 +26,7 @@ if ( ! function_exists( 'blondetheme_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+                add_theme_support( 'post-formats',  array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -79,6 +80,15 @@ if ( ! function_exists( 'blondetheme_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+add_theme_support('custom-header', apply_filters('blondetheme_custom_header_args', array(
+            'default-image'  => '',
+            'default-text-color'   => '000000',
+            'width'    => 1333,
+            'height'   => 250,
+            'flex-height'   => true,
+            'wp-head-callback'   => 'blondetheme_header_style'
+        )));
+
 	}
 endif;
 add_action( 'after_setup_theme', 'blondetheme_setup' );
@@ -132,6 +142,8 @@ function blondetheme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'blondetheme_scripts' );
 
+
+
 /**
  * Implement the Custom Header feature.
  */
@@ -139,8 +151,7 @@ require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
+ */require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
